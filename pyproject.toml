@@ -6,4 +6,9 @@ dependencies = [
     "temporalio>=1.28.0",
     "google-genai>=1.0.0",
     "python-dotenv>=1.0.0",
+    # temporal_coding_agent demo — durable agent via the OpenAI Agents plugin
+    # (the contrib needs both the openai-agents SDK and opentelemetry), driving
+    # Claude through LiteLLM.
+    "temporalio[openai-agents,opentelemetry]>=1.28.0",
+    "litellm>=1.0.0",
 ]
