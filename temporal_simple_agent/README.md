@@ -48,6 +48,9 @@ control flow is what makes it an agent. Each `llm_call` and each tool is a Tempo
 activity, so the loop is durable: crash the worker, restart, completed steps are replayed,
 not re-run.
 
+This agent runs one prompt and exits. To make it multi-turn/conversational (a long-running
+session), see [`NOTES.md`](NOTES.md).
+
 ---
 
 ## Setup & run
