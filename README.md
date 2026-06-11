@@ -5,7 +5,9 @@ Two self-contained demos showing **durable execution** with the [Temporal](https
 | Demo | What it shows |
 |------|--------------|
 | [`temporal_demo/`](temporal_demo/README.md) | Notification pipeline — sequential activities, automatic retries, crash recovery |
-| [`temporal_agent/`](temporal_agent/README.md) | Durable AI agent — long-running Claude session with tool use, signals, and queries |
+| [`temporal_agent/`](temporal_agent/README.md) | Durable AI agent — long-running session with a hand-rolled tool loop, signals, and queries |
+| [`temporal_coding_agent/`](temporal_coding_agent/README.md) | Durable coding agent — OpenAI Agents SDK + `activity_as_tool`, Claude via LiteLLM (loop handled for you) |
+| [`temporal_simple_agent/`](temporal_simple_agent/README.md) | Same coding agent, **hand-written loop** — plain Temporal + a LiteLLM call activity, no framework |
 
 ---
 
@@ -45,7 +47,9 @@ uv sync
 See each subfolder's README for step-by-step instructions:
 
 - **[temporal_demo/README.md](temporal_demo/README.md)** — notification pipeline with retries and crash recovery
-- **[temporal_agent/README.md](temporal_agent/README.md)** — durable Claude agent with tool use
+- **[temporal_agent/README.md](temporal_agent/README.md)** — durable agent with a hand-rolled tool loop (Gemini)
+- **[temporal_coding_agent/README.md](temporal_coding_agent/README.md)** — durable coding agent via the OpenAI Agents plugin (Claude/LiteLLM); needs `ANTHROPIC_API_KEY`
+- **[temporal_simple_agent/README.md](temporal_simple_agent/README.md)** — the same coding agent with a hand-written loop on plain Temporal; needs `ANTHROPIC_API_KEY`
 
 ---
 
